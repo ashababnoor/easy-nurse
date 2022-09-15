@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "279954496578",
+    "project_id": "easy-nurse-5c043",
+    "storage_bucket": "easy-nurse-5c043.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279954496578:android:e33ad9829ead6f94ace1db",
+        "android_client_info": {
+          "package_name": "com.example.easynurse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279954496578-6o9pq7jnl52ons7ksdp7il7l3vvpmbrh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbJQhOeG-KoUfqUUJdQWT4o-76wKIJRPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279954496578-6o9pq7jnl52ons7ksdp7il7l3vvpmbrh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
