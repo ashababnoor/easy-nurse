@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Easy Nurse</string>
-    <string name="add_appointment">Add Appointment</string>
+
+    <string name="add_jobs">Add Jobs</string>
+
+    <string name="your_posted_jobs">Your posted jobs</string>
 
 
 </resources>

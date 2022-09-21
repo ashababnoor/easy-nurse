@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.appointment_list_layout, R.id.card_text, appTitleArray);
-        titleList = findViewById(R.id.app_title_list);
+        titleList = findViewById(R.id.job_title_list);
         titleList.setAdapter(adapter);
 
 

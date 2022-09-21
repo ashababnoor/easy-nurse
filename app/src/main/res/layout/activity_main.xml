@@ -68,7 +68,7 @@
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:background="@drawable/custom_button"
-        android:text="@string/add_appointment"
+        android:text="@string/add_jobs"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
@@ -84,9 +84,9 @@
         android:id="@+id/textView3"
         android:layout_width="251dp"
         android:layout_height="wrap_content"
-        android:text="Your Posted Appointments"
+        android:text="@string/your_posted_jobs"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
@@ -95,7 +95,7 @@
         app:layout_constraintVertical_bias="0.373" />
 
     <ListView
-        android:id="@+id/app_title_list"
+        android:id="@+id/job_title_list"
         android:layout_width="377dp"
         android:layout_height="330dp"
         android:divider="@color/primary700"
