@@ -14,9 +14,12 @@
         android:theme="@style/Theme.EasyNurse"
         tools:targetApi="31">
         <activity
-            android:name=".JobPostingForm"
-            android:parentActivityName=".MainActivity"
+            android:name=".PatientProfile"
             android:exported="false" />
+        <activity
+            android:name=".JobPostingForm"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
