@@ -1,62 +1,34 @@
 {
   "project_info": {
-    "project_number": "279954496578",
-    "project_id": "easy-nurse-5c043",
-    "storage_bucket": "easy-nurse-5c043.appspot.com"
+    "project_number": "663960624485",
+    "firebase_url": "https://test-20c00-default-rtdb.firebaseio.com",
+    "project_id": "test-20c00",
+    "storage_bucket": "test-20c00.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:279954496578:android:e33ad9829ead6f94ace1db",
+        "mobilesdk_app_id": "1:663960624485:android:8ab66f20c7df37add0558c",
         "android_client_info": {
           "package_name": "com.example.easynurse"
         }
       },
       "oauth_client": [
         {
-          "client_id": "279954496578-6o9pq7jnl52ons7ksdp7il7l3vvpmbrh.apps.googleusercontent.com",
+          "client_id": "663960624485-dbp6bpgh12bcrfoihr16tldos7m7i4d6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDbJQhOeG-KoUfqUUJdQWT4o-76wKIJRPo"
+          "current_key": "AIzaSyAcR8bmRmypq5X33valf-VBEoX39dRPO0Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "279954496578-6o9pq7jnl52ons7ksdp7il7l3vvpmbrh.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:279954496578:android:c958947a739bae3dace1db",
-        "android_client_info": {
-          "package_name": "com.example.myapplication"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "279954496578-6o9pq7jnl52ons7ksdp7il7l3vvpmbrh.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDbJQhOeG-KoUfqUUJdQWT4o-76wKIJRPo"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "279954496578-6o9pq7jnl52ons7ksdp7il7l3vvpmbrh.apps.googleusercontent.com",
+              "client_id": "663960624485-dbp6bpgh12bcrfoihr16tldos7m7i4d6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -37,7 +37,7 @@ public class JobPostingForm extends AppCompatActivity {
         post = findViewById(R.id.button);
         jobdetails =new jobDetails();
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance("https://easy-nurse-5c043-default-rtdb.firebaseio.com/");
 
 
         databaseReference = firebaseDatabase.getInstance().getReference("Job Posts");
