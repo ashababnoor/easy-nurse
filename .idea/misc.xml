@@ -6,7 +6,10 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.186" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.186" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1438079833984375" />
-        <entry key="app/src/main/res/layout/activity_register_user.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_register_user.xml" value="0.1931353457339175" />
+        <entry key="app/src/main/res/layout/fragment_register__initial_form.xml" value="0.16126126126126125" />
+        <entry key="app/src/main/res/layout/fragment_register_account_type_selection.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_register_initial_form.xml" value="0.16126126126126125" />
       </map>
     </option>
   </component>

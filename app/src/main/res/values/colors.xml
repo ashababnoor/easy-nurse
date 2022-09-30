@@ -10,4 +10,6 @@
     <color name="primary200">#3FA9F5</color>
     <color name="primary700">#0071BC</color>
     <color name="primary500">#29ABE2</color>
+    <color name="darkBG">#151515</color>
+    <color name="lightGrey">#e5e5e5</color>
 </resources>
