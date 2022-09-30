@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RegisterFragmentAccountTypeSelection">
+    tools:context=".RegisterFragmentAccountTypeSelection"
+    android:background="@color/primary700">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/register_constraint_layout"
+        android:id="@+id/register_constraint_layout_account_type_selection"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="50dp"
