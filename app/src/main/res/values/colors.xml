@@ -18,4 +18,6 @@
     <color name="bg_color">#040507</color>
     <color name="bg_card_color">#423F5B</color>
 
+    <color name="darker_grey">#3A3B3C</color>
+
 </resources>
