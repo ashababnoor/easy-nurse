@@ -6,12 +6,12 @@
                 {
                     "source": "F:\\Semester-8\\New folder (2)\\easy-nurse\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
-                        "startLines": "6",
+                        "startLines": "5",
                         "startColumns": "4",
-                        "startOffsets": "110",
-                        "endLines": "20",
+                        "startOffsets": "108",
+                        "endLines": "19",
                         "endColumns": "12",
-                        "endOffsets": "844"
+                        "endOffsets": "842"
                     },
                     "to": {
                         "startLines": "9",
