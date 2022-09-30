@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,6 +28,11 @@ import java.util.ArrayList;
 
 public class patient_home extends AppCompatActivity {
     //Array of titles
+
+    BottomNavigationItemView bottomNavigationItemView;
+    private Settings settings = new Settings();
+    private
+
 
 
     FirebaseDatabase firebaseDatabase;
