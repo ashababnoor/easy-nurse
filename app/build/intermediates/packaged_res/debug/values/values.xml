@@ -1,36 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="bg_card_color">#423F5B</color>
+    <color name="bg_color">#040507</color>
     <color name="black">#FF000000</color>
+    <color name="darkBG">#151515</color>
+    <color name="darker_grey">#3A3B3C</color>
+    <color name="lightGrey">#e5e5e5</color>
+    <color name="lighter_grey">#cbced4</color>
     <color name="primary200">#3FA9F5</color>
     <color name="primary500">#29ABE2</color>
     <color name="primary700">#0071BC</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_700">#040507</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
+    <string name="account_type_info">* You may select either patient or nurse type account.</string>
+    <string name="add_jobs">Make A Job</string>
     <string name="app_name">EasyNurse</string>
     <string name="banner_subtitle">Hire nurses and care-givers</string>
     <string name="btn_login">Login</string>
     <string name="btn_register">Register</string>
     <string name="create_an_account">Create new account</string>
+    <string name="default_web_client_id" translatable="false">663960624485-dbp6bpgh12bcrfoihr16tldos7m7i4d6.apps.googleusercontent.com</string>
     <string name="dob">Date of Birth</string>
     <string name="email_address">Email Address</string>
+    <string name="firebase_database_url" translatable="false">https://test-20c00-default-rtdb.firebaseio.com</string>
     <string name="first_name">First Name</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="full_name">Full Name</string>
+    <string name="gcm_defaultSenderId" translatable="false">663960624485</string>
     <string name="gender">Gender</string>
+    <string name="google_api_key" translatable="false">AIzaSyAcR8bmRmypq5X33valf-VBEoX39dRPO0Q</string>
+    <string name="google_app_id" translatable="false">1:663960624485:android:8ab66f20c7df37add0558c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAcR8bmRmypq5X33valf-VBEoX39dRPO0Q</string>
+    <string name="google_storage_bucket" translatable="false">test-20c00.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="last_name">Last Name</string>
     <string name="login_prompt">Already have an account?</string>
     <string name="new_account_prompt">Don\'t have an account?</string>
+    <string name="nurse">Nurse</string>
     <string name="password">Password</string>
+    <string name="patient">Patient</string>
     <string name="phone">Phone Number</string>
+    <string name="project_id" translatable="false">test-20c00</string>
     <string name="radiobutton_female">Female</string>
     <string name="radiobutton_male">Male</string>
     <string name="radiobutton_other">Other</string>
     <string name="register_terms">* By registering you agree to our terms and conditions.</string>
-    <style name="Theme.EasyNurse" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <string name="select_account_type">Select your account type</string>
+    <string name="your_posted_jobs">Your posted jobs</string>
+    <style name="Theme.EasyNurse" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/primary700</item>
         <item name="colorPrimaryVariant">@color/primary700</item>
