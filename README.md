@@ -13,3 +13,6 @@ A mobile app for availing services from professional nurses and care-givers.
 > - Debopom Sutradhar (011 201 046) &ndash; [@debopom](https://www.github.com/Debopom)
 > - Sudipto Mondal (011 201 184) &ndash; [@sudiptomondal25](https://www.github.com/SudiptoMondal25)
 
+
+#### Login View
+# ![EasyNurse - Login](Screenshots/login_page.png)
