@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.easynurse">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,9 +17,16 @@
         android:theme="@style/Theme.EasyNurse"
         tools:targetApi="31">
         <activity
+            android:name=".nurse_home"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".JobPostingForm"
-            android:parentActivityName=".patient_home"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".patient_home" />
         <activity
             android:name=".patient_home"
             android:exported="true">
