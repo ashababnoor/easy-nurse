@@ -41,11 +41,11 @@ public class nurse_home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nurse_home);
+        setContentView(R.layout.patient_home);
         firebaseDatabase = FirebaseDatabase.getInstance("https://easy-nurse-5c043-default-rtdb.firebaseio.com/");
 
 
-        databaseReference = firebaseDatabase.getInstance().getReference("Job Posts/NCiArXmDLLhCXeb5Srz");
+        databaseReference = firebaseDatabase.getInstance().getReference("Job Posts");
 
 
         titleList = findViewById(R.id.job_title_list);
@@ -54,10 +54,12 @@ public class nurse_home extends AppCompatActivity {
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                String value=snapshot.getValue(String.class);
+                String value=snapshot.child("address").getValue(String.class).toString();
                 arrayList.add(value);
+
                 arrayAdapter = new ArrayAdapter<String>(nurse_home.this, android.R.layout.simple_list_item_1, arrayList);
                 titleList.setAdapter(arrayAdapter);
+
             }
 
             @Override
@@ -80,6 +82,8 @@ public class nurse_home extends AppCompatActivity {
 
             }
         });
+
+
 
 
 
