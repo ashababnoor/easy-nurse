@@ -7,6 +7,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -81,6 +82,36 @@ public class RegisterUser extends AppCompatActivity {
                 String phone = et_register_phone.getText().toString().trim();
                 String dob = et_register_dob.getText().toString().trim();
                 String gender = "";
+
+                if (name.isEmpty()){
+                    et_register_name.setError("Full name is required!");
+                    et_register_name.requestFocus();
+                    return;
+                }
+
+                if (email.isEmpty()){
+                    et_register_email.setError("Email is required!");
+                    et_register_email.requestFocus();
+                    return;
+                }
+
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    et_register_email.setError("Please provide a valid email!");
+                    et_register_email.requestFocus();
+                    return;
+                }
+
+                if (pass.isEmpty()){
+                    et_register_pass.setError("Password is required");
+                    et_register_pass.requestFocus();
+                    return;
+                }
+
+                if (pass.length() < 8){
+                    et_register_pass.setError("Password must be at least 8 characters!");
+                    et_register_pass.requestFocus();
+                    return;
+                }
 
                 Log.d("RegisterFormInfo", "Name: "+ name + ", Email: " + email + ", Password: " + pass + ",  Phone: " + phone + ", DoB: " + dob);
 
