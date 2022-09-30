@@ -7,28 +7,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Adapter;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
+public class patient_home extends AppCompatActivity {
     //Array of titles
 
 
@@ -45,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.patient_home);
         firebaseDatabase = FirebaseDatabase.getInstance("https://easy-nurse-5c043-default-rtdb.firebaseio.com/");
 
 
@@ -60,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 String value=snapshot.getValue(String.class);
                 arrayList.add(value);
-                arrayAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, arrayList);
+                arrayAdapter = new ArrayAdapter<String>(patient_home.this, android.R.layout.simple_list_item_1, arrayList);
                 titleList.setAdapter(arrayAdapter);
             }
 
@@ -91,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         addJobs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, JobPostingForm.class);
+                Intent intent = new Intent(patient_home.this, JobPostingForm.class);
                 startActivity(intent);
             }
         });
