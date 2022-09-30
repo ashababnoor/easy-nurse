@@ -39,7 +39,7 @@
             android:exported="false"
             android:parentActivityName=".patient_home" />
         <activity
-            android:name=".patient_home"
+
 
             android:name=".NotificationActivity"
             android:exported="false" />
