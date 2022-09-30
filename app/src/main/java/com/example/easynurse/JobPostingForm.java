@@ -46,10 +46,10 @@ public class JobPostingForm extends AppCompatActivity {
 
 
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Job Details");
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+////        ActionBar actionBar = getSupportActionBar();
+////        actionBar.setTitle("Job Details");
+//        actionBar.setDisplayShowHomeEnabled(true);
+//        actionBar.setDisplayHomeAsUpEnabled(true);
         post.setOnClickListener(view->{
             postJob();
         });

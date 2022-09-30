@@ -42,7 +42,7 @@
             android:name="com.example.easynurse.NurseProfile"
             android:exported="false" />
         <activity
-            android:name="com.example.easynurse.nurse_home"
+            android:name="com.example.easynurse.patient_home"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
@@ -53,7 +53,7 @@
             android:exported="false"
             android:parentActivityName="com.example.easynurse.patient_home" />
         <activity
-            android:name="com.example.easynurse.patient_home"
+            android:name="com.example.easynurse.NurseHome"
             android:exported="false" />
         <activity
             android:name="com.example.easynurse.RegisterUser"

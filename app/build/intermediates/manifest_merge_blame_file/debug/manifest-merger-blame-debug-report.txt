@@ -18,7 +18,7 @@
 12-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:8:22-76
 13
 14    <application
-14-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:10:5-60:19
+14-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:10:5-61:19
 15        android:allowBackup="true"
 15-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:11:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -76,8 +76,8 @@
 43-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:39:13-37
 44        <activity
 44-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:40:9-46:20
-45            android:name="com.example.easynurse.nurse_home"
-45-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:41:13-39
+45            android:name="com.example.easynurse.patient_home"
+45-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:41:13-41
 46            android:exported="false" >
 46-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:42:13-37
 47            <meta-data
@@ -96,17 +96,17 @@
 54            android:parentActivityName="com.example.easynurse.patient_home" />
 54-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:50:13-55
 55        <activity
-55-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:51:9-55:40
-56            android:name="com.example.easynurse.patient_home"
-56-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:52:13-41
+55-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:51:9-56:40
+56            android:name="com.example.easynurse.NurseHome"
+56-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:52:13-38
 57            android:exported="false" />
-57-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:55:13-37
+57-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:56:13-37
 58        <activity
-58-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:56:9-58:40
+58-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:57:9-59:40
 59            android:name="com.example.easynurse.RegisterUser"
-59-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:57:13-41
+59-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:58:13-41
 60            android:exported="false" />
-60-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:58:13-37
+60-->F:\Semester-8\New folder (2)\easy-nurse\app\src\main\AndroidManifest.xml:59:13-37
 61
 62        <service
 62-->[com.google.firebase:firebase-database:20.0.6] C:\Users\dipto\.gradle\caches\transforms-3\5167e3c4c3260c311ccd35a6d5e1ccc0\transformed\firebase-database-20.0.6\AndroidManifest.xml:29:9-35:19
