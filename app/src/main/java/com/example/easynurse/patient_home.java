@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -38,10 +39,10 @@ public class patient_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.patient_home);
-        firebaseDatabase = FirebaseDatabase.getInstance("https://easy-nurse-5c043-default-rtdb.firebaseio.com/");
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
 
-        databaseReference = firebaseDatabase.getInstance().getReference("Job Posts/NCiArXmDLLhCXeb5Srz");
+        databaseReference = firebaseDatabase.getInstance().getReference("Job Posts");
 
 
         titleList = findViewById(R.id.job_title_list);
@@ -50,10 +51,13 @@ public class patient_home extends AppCompatActivity {
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                String value=snapshot.getValue(String.class);
+                String value=snapshot.child("address").getValue(String.class).toString();
                 arrayList.add(value);
+
                 arrayAdapter = new ArrayAdapter<String>(patient_home.this, android.R.layout.simple_list_item_1, arrayList);
                 titleList.setAdapter(arrayAdapter);
+                Log.d("array", String.valueOf(arrayList));
+
             }
 
             @Override
