@@ -19,9 +19,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2eaae59-a47e-4b57-a000-335df22d803d" name="Changes" comment="added fetched user data to shared preferences">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_notifications_24.xml" afterDir="false" />
+    <list default="true" id="c2eaae59-a47e-4b57-a000-335df22d803d" name="Changes" comment="added notification for when user logs in">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/NotificationActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_message_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +94,9 @@
   </component>
   <component name="RecentsManager">
     <key name="android.template.552964653">
+      <recent name="com.example.easynurse" />
+    </key>
+    <key name="android.template.788779158">
       <recent name="com.example.easynurse" />
     </key>
   </component>
@@ -252,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664554027454</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added notification for when user logs in">
+      <created>1664555129850</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664555129850</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,6 +304,7 @@
     <MESSAGE value="added navigation between multiple fragments and activities. registration process completed with account type" />
     <MESSAGE value="login via fetching data from firebase" />
     <MESSAGE value="added fetched user data to shared preferences" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fetched user data to shared preferences" />
+    <MESSAGE value="added notification for when user logs in" />
+    <option name="LAST_COMMIT_MESSAGE" value="added notification for when user logs in" />
   </component>
 </project>

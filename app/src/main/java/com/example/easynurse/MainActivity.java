@@ -134,9 +134,27 @@ public class MainActivity extends AppCompatActivity {
                                     editor.putString(DOB, userDOB);
                                     editor.apply();
 
-                                    String title = "EasyNurse Login";
+                                    String title = "EasyNurse";
                                     String message = "Dear " + userName + ", you are now successfully logged in!";
-                                    addNotification(title, message);
+
+                                    NotificationCompat.Builder builder = new NotificationCompat.Builder(
+                                            MainActivity.this
+                                    )
+                                            .setSmallIcon(R.drawable.ic_baseline_message_24)
+                                            .setContentTitle(title)
+                                            .setContentText(message)
+                                            .setAutoCancel(true);
+
+                                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.putExtra("message", message);
+
+                                    PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                                    builder.setContentIntent(pendingIntent);
+
+                                    NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                                    notificationManager.notify(0, builder.build());
+
 
                                     Toast.makeText(MainActivity.this, "Welcome " + userName +"!", Toast.LENGTH_LONG).show();
                                 }
@@ -160,54 +178,20 @@ public class MainActivity extends AppCompatActivity {
     public void radioButtonHandler(View view) {
     }
 
-    private void addNotification(String title, String message) {
-        NotificationCompat.Builder builder =
-                new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.ic_baseline_notifications_24)
-                        .setContentTitle(title)
-                        .setContentText(message);
-
-        Intent notificationIntent = new Intent(this, MainActivity.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
-                PendingIntent.FLAG_IMMUTABLE);
-        builder.setContentIntent(contentIntent);
-
-        // Add as notification
-        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        manager.notify(0, builder.build());
-    }
+//    private void addNotification(String title, String message) {
+//        NotificationCompat.Builder builder =
+//                new NotificationCompat.Builder(this)
+//                        .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+//                        .setContentTitle(title)
+//                        .setContentText(message);
+//
+//        Intent notificationIntent = new Intent(this, MainActivity.class);
+//        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+//                PendingIntent.FLAG_IMMUTABLE);
+//        builder.setContentIntent(contentIntent);
+//
+//        // Add as notification
+//        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+//        manager.notify(0, builder.build());
+//    }
 }
-
-
-
-//    //Notification
-////demoBtn
-//    Button loginBtn;
-//
-//    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-//            NotificationChannel channel = new NotificationChannel("My Notification", "My Notification", NotificationManager.IMPORTANCE_DEFAULT);
-//            NotificationManager manager = getSystemService(NotificationManager.class);
-//        manager.createNotificationChannel(channel);
-//        }
-//
-//
-//protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//
-//
-//        loginBtn = findViewById(R.id.login_btn);
-//        loginBtn.setOnClickListener(new View.OnClickListener() {
-//@Override
-//public void onClick(View view) {
-//        //notification code
-//        NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this, "My Notification");
-//        builder.setContentTitle("Login Notification");  //Notification title
-//        builder.setContentText("You are logged in successfully");
-//        builder.setSmallIcon(R.drawable.ic_notifications);
-//        builder.setAutoCancel(true);
-//
-//        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity.this);
-//        managerCompat.notify(1, builder.build());
-//        }
-//        });
