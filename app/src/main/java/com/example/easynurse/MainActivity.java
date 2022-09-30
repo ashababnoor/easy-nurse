@@ -3,7 +3,9 @@ package com.example.easynurse;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -17,6 +19,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,13 +34,30 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
+    private FirebaseUser firebaseUser;
+    private DatabaseReference dbReference;
+    private String userID;
+    private String userName;
+    private String userEmail;
+    private String userDOB;
+    private String userPhone;
+
+    public static final String MyPREFERENCES = "MyPreferences";
+    SharedPreferences sharedpreferences;
+    public static final String Name = "nameKey";
+    public static final String Phone = "phoneKey";
+    public static final String Email = "emailKey";
+    public static final String DOB = "dobKey";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
+
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        mAuth = FirebaseAuth.getInstance();
 
         et_login_email = (EditText) findViewById(R.id.et_login_email);
         et_login_pass = (EditText) findViewById(R.id.et_login_pass);
@@ -85,15 +109,44 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(MainActivity.this, "Logged in successfully!", Toast.LENGTH_LONG).show();
-                            progressBar.setVisibility(View.GONE);
+                            firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                            dbReference = FirebaseDatabase.getInstance().getReference("Users");
+                            userID = firebaseUser.getUid();
+
+                            dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    User user = snapshot.getValue(User.class);
+
+                                    if (user != null){
+                                        userName = user.name;
+                                        userEmail = user.email;
+                                        userDOB = user.dob;
+                                        userPhone = user.phone;
+                                    }
+
+                                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                                    editor.putString(Name, userName);
+                                    editor.putString(Phone, userPhone);
+                                    editor.putString(Email, userEmail);
+                                    editor.putString(DOB, userDOB);
+                                    editor.apply();
+
+                                    Toast.makeText(MainActivity.this, "Welcome " + userName +"!", Toast.LENGTH_LONG).show();
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+                                    Toast.makeText(MainActivity.this, "Something went wrong!", Toast.LENGTH_LONG).show();
+                                }
+                            });
                         }
                         else {
                             Toast.makeText(MainActivity.this, "Failed to log in. Please check your email and password.", Toast.LENGTH_LONG).show();
-                            progressBar.setVisibility(View.GONE);
                         }
+                        progressBar.setVisibility(View.GONE);
                     }
                 });
-
             }
         });
     }
