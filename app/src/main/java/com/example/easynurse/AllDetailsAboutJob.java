@@ -1,14 +1,19 @@
 package com.example.easynurse;
 
+import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Bundle;
+import android.widget.TextView;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.FirebaseDatabase;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,42 +28,51 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 
-public class nurse_home extends AppCompatActivity {
-    //Array of titles
-
+public class AllDetailsAboutJob extends AppCompatActivity {
+    TextView illness;
+    TextView description;
+    TextView phone;
+    TextView address;
 
     FirebaseDatabase firebaseDatabase;
 
 
     DatabaseReference databaseReference;
-    ListView titleList;
-    ArrayAdapter adapter;
-    ArrayList<String> arrayList = new ArrayList<>();
-    ArrayAdapter<String> arrayAdapter;
 
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.patient_home);
-        firebaseDatabase = FirebaseDatabase.getInstance("https://easy-nurse-5c043-default-rtdb.firebaseio.com/");
+        setContentView(R.layout.activity_all_details_about_job);
+
+        illness = findViewById(R.id.illness);
+        description = findViewById(R.id.description);
+        phone = findViewById(R.id.phone);
+        address = findViewById(R.id.address);
+
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
 
         databaseReference = firebaseDatabase.getInstance().getReference("Job Posts");
 
 
-        titleList = findViewById(R.id.job_title_list);
-        titleList.setAdapter(adapter);
-
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                String value=snapshot.child("address").getValue(String.class).toString();
-                arrayList.add(value);
+                String phoneNo=snapshot.child("phone").getValue(String.class).toString();
+                phone.setText(phoneNo);
 
-                arrayAdapter = new ArrayAdapter<String>(nurse_home.this, android.R.layout.simple_list_item_1, arrayList);
-                titleList.setAdapter(arrayAdapter);
+                String illnessstr = snapshot.child("illness").getValue(String.class).toString();
+                illness.setText(illnessstr);
+
+                String descriptionstr = snapshot.child("description").getValue(String.class).toString();
+                description.setText(descriptionstr);
+                String addressstr = snapshot.child("address").getValue(String.class).toString();
+                address.setText(addressstr);
+
+
+
 
             }
 
@@ -82,14 +96,5 @@ public class nurse_home extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
-
-
-
     }
 }
