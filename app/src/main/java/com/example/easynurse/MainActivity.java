@@ -28,6 +28,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_goto_signup;
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String Email = "emailKey";
     public static final String DOB = "dobKey";
 
+    private String userAccountType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
                                         userEmail = user.email;
                                         userDOB = user.dob;
                                         userPhone = user.phone;
+                                        userAccountType = user.accountType;
                                     }
 
                                     SharedPreferences.Editor editor = sharedpreferences.edit();
@@ -133,6 +137,8 @@ public class MainActivity extends AppCompatActivity {
                                     editor.putString(Email, userEmail);
                                     editor.putString(DOB, userDOB);
                                     editor.apply();
+
+                                    goToHomePage(userAccountType);
 
                                     String title = "EasyNurse";
                                     String message = "Dear " + userName + ", you are now successfully logged in!";
@@ -176,6 +182,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void radioButtonHandler(View view) {
+    }
+
+    private void goToHomePage(String userAccountType){
+        Intent changeToHomePage;
+        switch (userAccountType) {
+            case "Patient":
+                changeToHomePage = new Intent(MainActivity.this, patient_home.class);
+                MainActivity.this.startActivity(changeToHomePage);
+                MainActivity.this.finish();
+                break;
+            case "Nurse":
+                changeToHomePage = new Intent(MainActivity.this, nurse_home.class);
+                MainActivity.this.startActivity(changeToHomePage);
+                MainActivity.this.finish();
+                break;
+        }
     }
 
 //    private void addNotification(String title, String message) {

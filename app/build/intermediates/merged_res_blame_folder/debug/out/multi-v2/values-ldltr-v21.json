@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.easynurse.app-mergeDebugResources-27:/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "com.example.easynurse.app-mergeDebugResources-31:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/Users/shabab/.gradle/caches/transforms-3/eaddbf8150176006ad66bd9632b8bbc8/transformed/appcompat-1.5.0/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "/Users/shabab/.gradle/caches/transforms-3/9b566ccc45d51d0c06f06652cb7e4de1/transformed/appcompat-1.5.1/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
