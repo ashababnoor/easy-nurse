@@ -19,16 +19,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2eaae59-a47e-4b57-a000-335df22d803d" name="Changes" comment="added navigation between multiple fragments and activities. registration process completed with account type">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_button_white.xml" afterDir="false" />
+    <list default="true" id="c2eaae59-a47e-4b57-a000-335df22d803d" name="Changes" comment="login via fetching data from firebase">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/RegisterFragmentAccountTypeSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/RegisterFragmentAccountTypeSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/RegisterFragmentInitialForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/RegisterFragmentInitialForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/RegisterUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/RegisterUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/easynurse/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_user.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_account_type_selection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_account_type_selection.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_initial_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_initial_form.xml" afterDir="false" />
     </list>
@@ -239,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664538638757</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added navigation between multiple fragments and activities. registration process completed with account type">
+      <created>1664547744217</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664547744217</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,6 +278,7 @@
     <MESSAGE value="added radiobutton support and validation" />
     <MESSAGE value="added fragments in account creation and user type selection" />
     <MESSAGE value="added navigation between multiple fragments and activities. registration process completed with account type" />
-    <option name="LAST_COMMIT_MESSAGE" value="added navigation between multiple fragments and activities. registration process completed with account type" />
+    <MESSAGE value="login via fetching data from firebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="login via fetching data from firebase" />
   </component>
 </project>
