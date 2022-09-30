@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -57,7 +58,7 @@ public class patient_home extends AppCompatActivity {
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                String value=snapshot.child("address").getValue(String.class).toString();
+                String value=snapshot.child("phone").getValue(String.class).toString();
                 arrayList.add(value);
 
                 arrayAdapter = new ArrayAdapter<String>(patient_home.this, android.R.layout.simple_list_item_1, arrayList);
@@ -85,6 +86,16 @@ public class patient_home extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+        });
+        titleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                             @Override
+                                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                                 if (position == 0) {
+
+                                                     startActivity(new Intent(patient_home.this, AllDetailsAboutJob.class));
+
+                                                 }
+                                             }
         });
 
 
