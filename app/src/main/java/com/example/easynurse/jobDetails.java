@@ -1,6 +1,6 @@
 package com.example.easynurse;
 
-public class jobDetails {
+class jobDetails {
     String illness;
     String description;
     String address ;
