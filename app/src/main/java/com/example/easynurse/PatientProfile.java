@@ -4,7 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class PatientProfile extends AppCompatActivity {
+import com.google.firebase.database.DatabaseReference;
+
+public class PatientProfile<FirebaseUser> extends AppCompatActivity {
+
+    private FirebaseUser user;
+    private DatabaseReference reference;
+
+
+//    private String userID
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
