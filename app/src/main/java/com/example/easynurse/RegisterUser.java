@@ -60,11 +60,7 @@ public class RegisterUser extends AppCompatActivity {
         register_radioGroup = (RadioGroup) findViewById(R.id.register_radioGroup);
 
         btn_signup = (Button) findViewById(R.id.btn_signup);
-
         progressBar = (ProgressBar) findViewById(R.id.pb_register);
-
-        // int radioGroupSelectedId = register_radioGroup.getCheckedRadioButtonId();
-        // register_gender = (RadioButton) findViewById(radioGroupSelectedId);
 
         banner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,15 +109,38 @@ public class RegisterUser extends AppCompatActivity {
                     return;
                 }
 
-                Log.d("RegisterFormInfo", "Name: "+ name + ", Email: " + email + ", Password: " + pass + ",  Phone: " + phone + ", DoB: " + dob);
+                if (dob.isEmpty()){
+                    Toast.makeText(RegisterUser.this, "Date of Birth is required!", Toast.LENGTH_SHORT).show();
+                    et_register_dob.requestFocus();
+                    return;
+                }
+
+                if (phone.isEmpty()){
+                    et_register_phone.setError("Phone number is required!");
+                    et_register_phone.requestFocus();
+                    return;
+                }
+                RadioButton checkedButton;
+
+                if (register_radioGroup.getCheckedRadioButtonId() == -1) {
+                    Toast.makeText(RegisterUser.this, "Gender is required!", Toast.LENGTH_LONG).show();
+                    return;
+                } else {
+                    int radioGroupSelectedId = register_radioGroup.getCheckedRadioButtonId();
+                    checkedButton = (RadioButton) findViewById(radioGroupSelectedId);
+                    gender = checkedButton.getText().toString().trim();
+                }
+
+                Log.d("RegisterFormInfo", "Name: "+ name + ", Email: " + email + ", Password: " + pass + ",  Phone: " + phone + ", DoB: " + dob + ", Gender: " + gender);
 
                 progressBar.setVisibility(View.VISIBLE);
+                String finalGender = gender;
                 mAuth.createUserWithEmailAndPassword(email, pass)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
-                                    User user = new User(name, email, pass, dob, phone, gender);
+                                    User user = new User(name, email, pass, dob, phone, finalGender);
 
                                     FirebaseDatabase.getInstance().getReference("Users")
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -130,7 +149,8 @@ public class RegisterUser extends AppCompatActivity {
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()){
                                                         Toast.makeText(RegisterUser.this, "User has been registered successfully", Toast.LENGTH_LONG).show();
-                                                        progressBar.setVisibility(View.VISIBLE);
+                                                        progressBar.setVisibility(View.GONE);
+                                                        registerViewToMainActivityView();
                                                     }
                                                     else {
                                                         Toast.makeText(RegisterUser.this, "Failed to register user.", Toast.LENGTH_LONG).show();
