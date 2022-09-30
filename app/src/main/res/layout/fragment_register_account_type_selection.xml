@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/register_constraint_layout_account_type_selection"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="900dp"
         android:paddingBottom="50dp"
         android:paddingTop="50dp"
         android:background="@color/primary700">

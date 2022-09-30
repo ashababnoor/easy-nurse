@@ -1,12 +1,14 @@
 package com.example.easynurse;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.os.Parcelable;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +41,9 @@ public class RegisterFragmentAccountTypeSelection extends Fragment {
     private static final String USER_OBJECT = "user_object";
     private User mUser;
 
+    View currentView;
+    int desiredHeight;
+
     public RegisterFragmentAccountTypeSelection() {
         // Required empty public constructor
     }
@@ -64,6 +69,9 @@ public class RegisterFragmentAccountTypeSelection extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_register_account_type_selection, container, false);
+        desiredHeight = Resources.getSystem().getDisplayMetrics().heightPixels;
+        currentView = rootView;
+
 
         Log.d("UserObject", "User object received from initial form fragment");
         Log.d("UserObject", "User --> name: "+mUser.name+", Email: " + mUser.email + ", Password: " + mUser.password + ",  Phone: " + mUser.phone + ", DoB: " + mUser.dob + ", Gender: " + mUser.gender);
